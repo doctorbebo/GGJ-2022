@@ -6,8 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Polarity))]
 public class CameraScript : MonoBehaviour {
   public Dictionary<int, Color> polarityMap = new Dictionary<int, Color> {
-    { PolarityStates.WHITE, Color.black },
-    { PolarityStates.BLACK, Color.white }
+    { PolarityStates.WHITE, Color.white },
+    { PolarityStates.BLACK, Color.black }
   };
   private Camera camera;
   private Polarity polarity;
