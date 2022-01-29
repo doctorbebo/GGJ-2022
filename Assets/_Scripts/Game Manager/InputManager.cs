@@ -27,7 +27,7 @@ public class InputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             Escape?.Invoke();
 
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetMouseButtonDown(1)) {
             currentPolarity = (currentPolarity + 1) % PolarityStates.STATES.Length;
 
             PolaritySwitched?.Invoke(currentPolarity);
