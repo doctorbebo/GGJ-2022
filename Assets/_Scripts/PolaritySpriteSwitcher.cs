@@ -16,6 +16,10 @@ public class PolaritySpriteSwitcher : MonoBehaviour {
     polarity.OnPolarityChanged += SwitchSprites;
   }
 
+  void OnDestroy() {
+    polarity.OnPolarityChanged -= SwitchSprites;
+  }
+
   void SwitchSprites(int newPolarity) {
     spriteRenderer.sprite = sprites[newPolarity];
   }

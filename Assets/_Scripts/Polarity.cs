@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Polarity : MonoBehaviour {
-  private int currentPolarity;
+  [SerializeField] private int currentPolarity = PolarityStates.WHITE;
   public event Action<int> OnPolarityChanged;
 
 
