@@ -34,4 +34,10 @@ public class ObstacleMover : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
     }
+
+    public void Message()
+    {
+        DisplayMessage.SetNewDisplayDuration(1f);
+        DisplayMessage.NewMessage("No!!! I bumped into another asteroid!");
+    }
 }
