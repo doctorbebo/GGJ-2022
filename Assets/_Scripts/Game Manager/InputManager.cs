@@ -7,10 +7,7 @@ public class InputManager : MonoBehaviour
 {
     private static InputManager instance;
     public static event Action Escape;
-    public static event Action<int> PolaritySwitched;
-
-    // Might not be the best place for this, but it works for now.
-    private int currentPolarity = PolarityStates.WHITE;
+    public static event Action PolarityChanged;
 
     private void Awake()
     {
@@ -28,9 +25,7 @@ public class InputManager : MonoBehaviour
             Escape?.Invoke();
 
         if (Input.GetMouseButtonDown(1)) {
-            currentPolarity = (currentPolarity + 1) % PolarityStates.STATES.Length;
-
-            PolaritySwitched?.Invoke(currentPolarity);
+            PolarityChanged?.Invoke();
         }
     }
 }

@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Camera))]
+[RequireComponent(typeof(Polarity))]
 public class CameraScript : MonoBehaviour {
   public Dictionary<int, Color> polarityMap = new Dictionary<int, Color> {
     { PolarityStates.WHITE, Color.black },
     { PolarityStates.BLACK, Color.white }
   };
   private Camera camera;
+  private Polarity polarity;
 
   void Awake() {
-    InputManager.PolaritySwitched += PolaritySwitched;
     camera = GetComponent<Camera>();
+    polarity = GetComponent<Polarity>();
+    polarity.OnPolarityChanged += ChangeBackgroundColor;
   }
 
-  void PolaritySwitched(int newPolarity) {
+  void ChangeBackgroundColor(int newPolarity) {
     camera.backgroundColor = polarityMap[newPolarity];
   }
 }

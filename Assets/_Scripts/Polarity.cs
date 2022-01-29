@@ -4,31 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Polarity : MonoBehaviour {
-  private SpriteRenderer spriteRenderer;
-  public Sprite[] sprites;
-  private int polarity;
+  private int currentPolarity;
+  public event Action<int> OnPolarityChanged;
 
-  void Awake() {
-    spriteRenderer = GetComponent<SpriteRenderer>();
-    InputManager.PolaritySwitched += PolaritySwitched;
+
+  public void setPolarity(int newPolarity) {
+    currentPolarity = newPolarity;
+    OnPolarityChanged?.Invoke(newPolarity);
   }
 
-  void PolaritySwitched(int newPolarity) {
-    polarity = newPolarity;
-    spriteRenderer.sprite = sprites[newPolarity];
+  public int getPolarity() {
+    return currentPolarity;
   }
-
-   public int GetPolarity() => polarity;
-}
-
-
-public static class PolarityExtension
-{
-    public static int? GetPolarity(this GameObject obj)
-    {
-        if (obj.TryGetComponent(out Polarity polarity))
-            return polarity.GetPolarity();
-        else
-            return null;
-    }
 }
