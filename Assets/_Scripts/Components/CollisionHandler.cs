@@ -8,7 +8,7 @@ public class CollisionHandler : MonoBehaviour
 {
     public string [] Tags;
 
-    public UnityEvent<Collision2D> CollisionEvent;
+    public UnityEvent<GameObject> CollisionEvent;
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -16,7 +16,7 @@ public class CollisionHandler : MonoBehaviour
         {
             if(collision.gameObject.CompareTag(tag))
             {
-                CollisionEvent?.Invoke(collision);
+                CollisionEvent?.Invoke(collision.gameObject);
                 break;
             }
         }
