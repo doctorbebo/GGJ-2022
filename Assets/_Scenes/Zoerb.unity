@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 755969097}
   - component: {fileID: 755969101}
   - component: {fileID: 755969100}
+  - component: {fileID: 755969102}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -323,10 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ac12bc2801e7e48a1543b62e0673d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageSpritePrefab: {fileID: 1689563036626265809, guid: fea195c9d51ff4425989fc897b687906, type: 3}
   moveSpeed: 0.1
-  damageDistance: 0.03
-  numDamageSprites: 7
 --- !u!50 &755969101
 Rigidbody2D:
   serializedVersion: 4
@@ -348,6 +346,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &755969102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755969094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b89feab552704cf38268575495c4442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSpritePrefab: {fileID: 1689563036626265809, guid: fea195c9d51ff4425989fc897b687906, type: 3}
+  damageDistance: 0.03
+  numDamageSprites: 7
 --- !u!1 &925990833
 GameObject:
   m_ObjectHideFlags: 0
