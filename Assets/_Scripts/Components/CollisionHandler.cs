@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Collider))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class CollisionHandler : MonoBehaviour
 {
     public string [] Tags;
