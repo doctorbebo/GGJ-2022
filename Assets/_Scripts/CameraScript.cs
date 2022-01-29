@@ -18,7 +18,15 @@ public class CameraScript : MonoBehaviour {
     polarity.OnPolarityChanged += ChangeBackgroundColor;
   }
 
-  void ChangeBackgroundColor(int newPolarity) {
+  void OnDestroy() {
+      polarity.OnPolarityChanged -= ChangeBackgroundColor;
+    }
+
+    void ChangeBackgroundColor(int newPolarity) {
+
+    if(camera == null || camera.Equals(null))
+        camera = GetComponent<Camera>();
+
     camera.backgroundColor = polarityMap[newPolarity];
   }
 }

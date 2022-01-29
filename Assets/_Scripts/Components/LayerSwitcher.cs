@@ -17,6 +17,11 @@ public class LayerSwitcher : MonoBehaviour
         OnPolarityChange(polarity.getPolarity());
     }
 
+    void OnDestroy()
+    {
+        polarity.OnPolarityChanged -= OnPolarityChange;
+    }
+
     // Update is called once per frame
     void Update()
     {
