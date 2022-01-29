@@ -24,7 +24,6 @@ public class MouseControl : MonoBehaviour {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z)) / 2;
         objectWidth = spriteRenderer.bounds.size.x / 2;
         objectHeight = spriteRenderer.bounds.size.y / 2;
-        Debug.Log($"ScreenBounds { screenBounds }, width { objectWidth }, height { objectHeight }");
 
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
