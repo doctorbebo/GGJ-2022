@@ -8,7 +8,7 @@ public class InputManager : MonoBehaviour
     private static InputManager instance;
     public static event Action Escape;
     public static event Action PolarityChanged;
-    public static event Action DamageShip;
+    public static event Action CauseDamage;
 
     private void Awake()
     {
@@ -29,8 +29,9 @@ public class InputManager : MonoBehaviour
             PolarityChanged?.Invoke();
         }
 
+        // For testing purposes only
         if (Input.GetKeyDown(KeyCode.D)) {
-            DamageShip?.Invoke();
+            CauseDamage?.Invoke();
         }
     }
 }

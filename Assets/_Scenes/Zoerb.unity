@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: thrust
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5290625343777114313, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
+      propertyPath: rotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: m_Name
       value: Asteroid White
@@ -355,10 +359,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 755969094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b89feab552704cf38268575495c4442, type: 3}
+  m_Script: {fileID: 11500000, guid: bbcf8a273aa414aefbdf0c54bf1f5b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageSpritePrefab: {fileID: 1689563036626265809, guid: fea195c9d51ff4425989fc897b687906, type: 3}
+  damageSprite: {fileID: 21300000, guid: d112e750a3968490e820b1c2301b1c3d, type: 3}
   damageDistance: 0.03
   numDamageSprites: 7
 --- !u!1 &925990833
@@ -482,6 +486,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
+--- !u!1 &1153515098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
+  m_PrefabInstance: {fileID: 2030194698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1153515105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153515098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcf8a273aa414aefbdf0c54bf1f5b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSprite: {fileID: 21300000, guid: b0bbfaa6b1d6b4c009eb11b939f15e1a, type: 3}
+  damageDistance: 0.05
+  numDamageSprites: 7
+--- !u!1 &1255790861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
+  m_PrefabInstance: {fileID: 5647551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1255790868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255790861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcf8a273aa414aefbdf0c54bf1f5b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSprite: {fileID: 21300000, guid: b0bbfaa6b1d6b4c009eb11b939f15e1a, type: 3}
+  damageDistance: 0.05
+  numDamageSprites: 7
 --- !u!1 &1269226651
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5290625343777114313, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: rotationSpeed
-      value: -30
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: m_Name

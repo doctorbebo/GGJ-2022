@@ -6,7 +6,7 @@ using UnityEngine;
 public class DamageSprite : MonoBehaviour {
   public float speed = 1f;
   public float damping = 0.98f;
-  public float cutoff = 0.001f;
+  public float cutoff = 0.01f;
   private SpriteRenderer spriteRenderer;
   private Vector2 acceleration;
   private Vector2 velocity;
@@ -23,7 +23,7 @@ public class DamageSprite : MonoBehaviour {
     velocity -= (Vector2) (transform.localPosition) * transform.localPosition.sqrMagnitude * Time.deltaTime;
     velocity = velocity * damping;
 
-    if (velocity.magnitude < cutoff && transform.localPosition.magnitude < (1 + cutoff)) {
+    if (velocity.magnitude < cutoff && ((Vector2) transform.localPosition).magnitude < cutoff) {
       DestroyObject(gameObject);
     }
   }

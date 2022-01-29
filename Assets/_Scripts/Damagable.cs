@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ship : MonoBehaviour {
-  public GameObject damageSpritePrefab;
+[RequireComponent(typeof(SpriteRenderer))]
+public class Damagable : MonoBehaviour {
+  private GameObject damageSpritePrefab;
+  public Sprite damageSprite;
   Color[] colors = { Color.cyan, Color.yellow, Color.magenta };
   int colorIndex = 0;
 
@@ -11,12 +13,14 @@ public class Ship : MonoBehaviour {
   [SerializeField] int numDamageSprites = 7;
 
   void Awake() {
-    InputManager.DamageShip += DamageShip;
+    damageSpritePrefab = Resources.Load("Damage Sprite Prefab") as GameObject;
+    InputManager.CauseDamage += Damage;
   }
 
-  void DamageShip() {
+  void Damage() {
+    damageSpritePrefab.GetComponent<SpriteRenderer>().sprite = damageSprite;
     for (int i = 0; i < numDamageSprites; i++) {
-      GameObject go = Instantiate(damageSpritePrefab, transform.position + Vector3.forward, Quaternion.identity);
+      GameObject go = Instantiate(damageSpritePrefab, transform.position + Vector3.forward, transform.rotation);
       go.transform.parent = transform;
       Vector2 velocity = Quaternion.Euler(0f, 0f, 360 / numDamageSprites * i) * Vector2.up * damageDistance;
       go.GetComponent<DamageSprite>().Init(colors[colorIndex++ % colors.Length], velocity);

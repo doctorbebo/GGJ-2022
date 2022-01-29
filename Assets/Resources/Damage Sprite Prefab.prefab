@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1689563036626265808}
   - component: {fileID: -6987002896753635688}
   m_Layer: 0
-  m_Name: Ship Damage Sprite
+  m_Name: Damage Sprite Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.01, y: 2.6}
+  m_Size: {x: 2.51, y: 2.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -97,4 +97,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   damping: 0.98
-  cutoff: 0.001
+  cutoff: 0.01
