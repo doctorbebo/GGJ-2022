@@ -26,6 +26,15 @@ public class DisplayMessage : MonoBehaviour
         text = displayText;
         duration = displayDuration;
         timer = duration;
+
+        if (text == null || text.Equals(null))
+        {
+            Debug.LogError("DisplayMessage component needs a TMPro.TextMeshProUGUI element", this);
+            gameObject.SetActive(false);
+        }
+
+
+
     }
 
     private void Update()
