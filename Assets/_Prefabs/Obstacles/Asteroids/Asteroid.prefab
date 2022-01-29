@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 5290625343777114312}
   - component: {fileID: 6051609456327805819}
   - component: {fileID: 5290625343777114313}
-  - component: {fileID: 4760940566887967527}
+  - component: {fileID: 1079823058}
   m_Layer: 0
   m_Name: Asteroid
-  m_TagString: collidable
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,9 +120,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.059678297}
   serializedVersion: 2
-  m_Radius: 1.255
+  m_Radius: 1.1953781
 --- !u!114 &5290625343777114313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,8 +137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveLeft: 1
   thrust: 30
-  rotationSpeed: 5
---- !u!114 &4760940566887967527
+  rotationSpeed: 30
+--- !u!114 &1079823058
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - collidable
+  - Obstacle
   CollisionEvent:
     m_PersistentCalls:
       m_Calls:

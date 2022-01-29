@@ -286,35 +286,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
   m_PrefabInstance: {fileID: 5290625344856867355}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1079823058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079823057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c6d3155c0394e71a6c35068df918c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Tags:
-  - collidable
-  CollisionEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1079823057}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &2054737041
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,17 +437,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5290625343777114313, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
-      propertyPath: rotationSpeed
-      value: 30
+    - target: {fileID: 1079823058, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
+      propertyPath: Tags.Array.data[0]
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: m_Name
       value: Asteroid
-      objectReference: {fileID: 0}
-    - target: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
-      propertyPath: m_TagString
-      value: collidable
       objectReference: {fileID: 0}
     - target: {fileID: 5290625343777114318, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: m_RootOrder
@@ -522,13 +489,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6051609456327805819, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
-      propertyPath: m_Radius
-      value: 1.1953781
-      objectReference: {fileID: 0}
-    - target: {fileID: 6051609456327805819, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.059678297
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4760940566887967527, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
