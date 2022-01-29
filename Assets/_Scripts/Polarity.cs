@@ -6,6 +6,7 @@ using UnityEngine;
 public class Polarity : MonoBehaviour {
   private SpriteRenderer spriteRenderer;
   public Sprite[] sprites;
+  private int polarity;
 
   void Awake() {
     spriteRenderer = GetComponent<SpriteRenderer>();
@@ -13,6 +14,21 @@ public class Polarity : MonoBehaviour {
   }
 
   void PolaritySwitched(int newPolarity) {
+    polarity = newPolarity;
     spriteRenderer.sprite = sprites[newPolarity];
   }
+
+   public int GetPolarity() => polarity;
+}
+
+
+public static class PolarityExtension
+{
+    public static int? GetPolarity(this GameObject obj)
+    {
+        if (obj.TryGetComponent(out Polarity polarity))
+            return polarity.GetPolarity();
+        else
+            return null;
+    }
 }
