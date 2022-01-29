@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider))]
 public class CollisionHandler : MonoBehaviour
 {
     public string [] Tags;
 
-    public UnityEvent CollisionEvent;
+    public UnityEvent<Collision2D> CollisionEvent;
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,7 +16,7 @@ public class CollisionHandler : MonoBehaviour
         {
             if(collision.gameObject.CompareTag(tag))
             {
-                CollisionEvent?.Invoke();
+                CollisionEvent?.Invoke(collision);
                 break;
             }
         }
