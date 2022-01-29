@@ -150,20 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c6d3155c0394e71a6c35068df918c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tags:
-  - Obstacle
+  Tags: []
   CollisionEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5290625343777114314}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
