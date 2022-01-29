@@ -19,8 +19,8 @@ public class Gun : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject gameObject = Instantiate(bulletPrefab, transform.position, transform.rotation);
-            Destroy(gameObject, destroyTime);
+            GameObject bulletObject = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Destroy(bulletObject, destroyTime);
         }
     }
 }
