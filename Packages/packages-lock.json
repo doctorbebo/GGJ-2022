@@ -145,15 +145,6 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
-    "info.byronbrown.bebotools": {
-      "version": "https://github.com/doctorbebo/info.byronbrown.core.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.textmeshpro": "2.1.6"
-      },
-      "hash": "bcd16f96cce3393fa51fdac502d75b82df81b6d7"
-    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
