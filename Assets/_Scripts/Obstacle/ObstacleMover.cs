@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class ObstacleMover : MonoBehaviour
 {
+    public bool moveLeft = true;
     private Rigidbody2D rb;
     public float thrust = 30;
     public float rotationSpeed = 5;
@@ -16,7 +17,11 @@ public class ObstacleMover : MonoBehaviour
 
     private void OnEnable()
     {
-        rb.AddForce(Vector3.left * thrust * 10);
+        if(moveLeft)
+            rb.AddForce(Vector3.left * thrust * 10);
+        else
+            rb.AddForce(-Vector3.left * thrust * 10);
+            
 
         if (Random.Range(0, 2) == 0)
             rotationSpeed *= -1;

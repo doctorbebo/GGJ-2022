@@ -31,10 +31,10 @@ public class ObstacleSpawner : MonoBehaviour
     
     private void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(this);
+        //if (instance == null)
+        //    instance = this;
+        //else
+        //    Destroy(this);
 
         timer = spawnRate;
     }
