@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Asteroid
       objectReference: {fileID: 0}
+    - target: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5290625343777114318, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: m_RootOrder
       value: 0
