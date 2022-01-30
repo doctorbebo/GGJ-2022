@@ -4,15 +4,23 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Damagable))]
 public class MouseControl : MonoBehaviour {
   private Rigidbody2D rigidbody2d;
   private SpriteRenderer spriteRenderer;
+  private Damagable damagable;
 
   [SerializeField] float moveSpeed = 0.1f;
 
   void Start() {
     spriteRenderer = GetComponent<SpriteRenderer>();
     rigidbody2d = GetComponent<Rigidbody2D>();
+    damagable = GetComponent<Damagable>();
+  }
+
+  void OnCollisionEnter2D(Collision2D collision) {
+    damagable.Damage();
+    Destroy(collision.gameObject);
   }
 
   void Update() {
