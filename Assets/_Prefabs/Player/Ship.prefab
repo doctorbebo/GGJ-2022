@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4256443366064096822}
   - component: {fileID: 250103440510612541}
   - component: {fileID: 4338730265847473750}
+  - component: {fileID: 8161448055859265619}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -245,3 +246,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8161448055859265619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250103440510612535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcf8a273aa414aefbdf0c54bf1f5b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSprite: {fileID: 21300000, guid: d112e750a3968490e820b1c2301b1c3d, type: 3}
+  damageDistance: 0.03
+  numDamageSprites: 7
