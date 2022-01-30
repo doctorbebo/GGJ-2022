@@ -48,4 +48,4 @@ MonoBehaviour:
   spawnXposition: 15
   spawnRate: 1
   obstacles:
-  - {fileID: 0}
+  - {fileID: 1097062901087421395, guid: dff0e6e1b801e499d9c66510e007ddfa, type: 3}

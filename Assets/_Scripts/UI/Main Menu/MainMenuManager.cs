@@ -11,6 +11,12 @@ public class MainMenuManager : MonoBehaviour
     public TextMeshProUGUI playResumeText;
     private int sceneIndex;
 
+    [Header("Audio")]
+
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip clickSFX;
+    [SerializeField] AudioClip hoverSFX;
+
     private void Awake()
     {
         if (instance == null)
@@ -36,7 +42,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void OnDisable()
     {
-        Time.timeScale = 1;        
+        Time.timeScale = 1;
     }
 
     private void OnDestroy()
@@ -46,21 +52,41 @@ public class MainMenuManager : MonoBehaviour
 
     public void PlayResume()
     {
+        MouseClick();
+
         if (sceneIndex == 0)
             SceneManager.LoadScene(1);
 
         gameObject.SetActive(false);
+
     }
 
     public void Options()
     {
+        MouseClick();
         print("Options");
     }
 
     public void Quit()
     {
+        MouseClick();
         Application.Quit();
         print("Quit");
+
+    }
+
+    public void MouseClick()
+    {
+        audioSource.volume = 0.75f;
+        audioSource.pitch = Random.Range(0.8f, 1.3f);
+        audioSource.PlayOneShot(clickSFX);
+    }
+
+    public void MouseHover()
+    {
+        audioSource.volume = 1f;
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.PlayOneShot(hoverSFX);
     }
 
     private void ActivateSelf()

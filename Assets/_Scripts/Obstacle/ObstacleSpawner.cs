@@ -45,7 +45,7 @@ public class ObstacleSpawner : MonoBehaviour
     private void SpawnObstacle() {
         GameObject spawnObj = obstacles[Random.Range(0,obstacles.Length)];
         spawnObj = Instantiate(spawnObj, new Vector3(spawnXposition, Random.Range(min, max), 0), Quaternion.identity, transform);
-        float scale = Random.Range(0.5f, 3f);
+        float scale = Random.Range(0.25f, 1.5f);
         timer += scale / 0.5f * Time.deltaTime;
         spawnObj.transform.localScale = new Vector3(scale, scale, 1.0f);
 

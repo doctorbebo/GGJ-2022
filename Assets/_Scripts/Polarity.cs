@@ -5,21 +5,34 @@ using UnityEngine;
 
 public class Polarity : MonoBehaviour
 {
-    [SerializeField] public int currentPolarity = PolarityStates.WHITE;
+    public static Polarity playerPolarity;
+
+    [SerializeField] public bool samePolaraityAsPlayer = true;
     public event Action<int> OnPolarityChanged;
-    GameObject playerObject;
+
+    private int currentPolarity = PolarityStates.WHITE;
+
+    private void Awake()
+    {
+        if(gameObject.tag == "Player")
+        {
+            setPolarity(PolarityStates.BLACK);
+            playerPolarity = this;
+            samePolaraityAsPlayer = true;
+        }
+    }
 
     private void Start()
     {
-        if(gameObject.tag == "Bullet")
-        {
-            playerObject = GameObject.FindGameObjectWithTag("Player");
-            if(playerObject.GetComponent<Polarity>().currentPolarity == PolarityStates.BLACK)
-            {
-                setPolarity(PolarityStates.BLACK);
-            }
-        }
 
+        if(samePolaraityAsPlayer)
+        {
+            setPolarity(playerPolarity.getPolarity());
+        }
+        else
+        {
+            setPolarity(playerPolarity.getPolarity() == PolarityStates.WHITE ? PolarityStates.BLACK : PolarityStates.WHITE);
+        }
 
     }
 

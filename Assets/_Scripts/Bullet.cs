@@ -12,7 +12,10 @@ public class Bullet : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision) {
       if (collision.gameObject != transform.parent.parent.gameObject) {
         Destroy(gameObject);
-        Destroy(collision.gameObject);
+        Damagable damagable = collision.gameObject.GetComponent<Damagable>();
+        if (damagable != null) {
+          damagable.Damage();
+        }
       }
     }
 

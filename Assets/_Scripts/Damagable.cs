@@ -6,6 +6,7 @@ using UnityEngine;
 public class Damagable : MonoBehaviour {
   private GameObject damageSpritePrefab;
   public Sprite damageSprite;
+  public int health = 5;
   Color[] colors = { Color.cyan, Color.yellow, Color.magenta };
   int colorIndex = 0;
 
@@ -16,18 +17,18 @@ public class Damagable : MonoBehaviour {
     damageSpritePrefab = Resources.Load("Damage Sprite Prefab") as GameObject;
   }
 
-  void Update() {
-    if (Input.GetKeyDown(KeyCode.D)) {
-      Damage();
-    }
-  }
+  public void Damage() {
+    health -= 1;
 
-  void Damage() {
+    if (health <= 0) {
+      Destroy(gameObject);
+    }
     damageSpritePrefab.GetComponent<SpriteRenderer>().sprite = damageSprite;
     for (int i = 0; i < numDamageSprites; i++) {
-      GameObject go = Instantiate(damageSpritePrefab, transform.position + Vector3.forward, transform.rotation);
-      go.transform.parent = transform;
+      Debug.Log($"Instantiating on {gameObject.name}");
+      GameObject go = Instantiate(damageSpritePrefab, transform.position + Vector3.forward, transform.rotation, transform);
       Vector2 velocity = Quaternion.Euler(0f, 0f, 360 / numDamageSprites * i) * Vector2.up * damageDistance;
+      Debug.Log($"Velocity = {velocity}");
       go.GetComponent<DamageSprite>().Init(colors[colorIndex++ % colors.Length], velocity);
     }
   }

@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6338f1a745d1b4af7a48e24ed39ee578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSamePolarityAsPlayer: 1
 --- !u!61 &-5957884370808370156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -201,3 +202,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6338f1a745d1b4af7a48e24ed39ee578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSamePolarityAsPlayer: 0

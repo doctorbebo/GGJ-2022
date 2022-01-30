@@ -22,7 +22,7 @@ public class MouseControl : MonoBehaviour {
     Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
     mousePosition.x = Mathf.Clamp(mousePosition.x, - cameraBounds.x + spriteDimensions.x, cameraBounds.x - spriteDimensions.x);
-    mousePosition.y = Mathf.Clamp(mousePosition.y, - cameraBounds.y + spriteDimensions.y, cameraBounds.y - spriteDimensions.y);
+    mousePosition.y = Mathf.Clamp(mousePosition.y, - cameraBounds.y, cameraBounds.y);
 
     rigidbody2d.MovePosition(Vector2.Lerp(transform.position, mousePosition, moveSpeed));
   }
