@@ -7,11 +7,17 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
+    private static MainMenuManager instance;
     public TextMeshProUGUI playResumeText;
     private int sceneIndex;
 
     private void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+
         DontDestroyOnLoad(this);
         InputManager.Escape += ActivateSelf;
     }
