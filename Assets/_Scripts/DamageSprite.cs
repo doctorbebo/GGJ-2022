@@ -20,7 +20,7 @@ public class DamageSprite : MonoBehaviour {
 
   void Update() {
     transform.localPosition += (Vector3) velocity * speed;
-    velocity -= (Vector2) (transform.localPosition) * transform.localPosition.sqrMagnitude * Time.deltaTime;
+    velocity -= (Vector2) (transform.localPosition) * transform.localPosition.sqrMagnitude * Time.deltaTime * 4;
     velocity = velocity * damping;
 
     if (velocity.magnitude < cutoff && ((Vector2) transform.localPosition).magnitude < cutoff) {
