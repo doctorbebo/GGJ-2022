@@ -424,5 +424,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menus
       objectReference: {fileID: 0}
+    - target: {fileID: 2897221279813076164, guid: 5469531d670534206a54d6569b7be720, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718151454275093877, guid: 5469531d670534206a54d6569b7be720, type: 3}
+      propertyPath: m_text
+      value: 'Mouse Movement
+
+
+        Left Click / Space
+
+
+        Right Click /
+        E
+
+
+        R Key
+
+
+        Ecape'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5469531d670534206a54d6569b7be720, type: 3}
