@@ -20,18 +20,22 @@ public class MouseControl : MonoBehaviour {
 
   void OnCollisionEnter2D(Collision2D collision) {
     damagable.Damage();
-    Destroy(collision.gameObject);
+    Damagable otherDamagable = collision.gameObject.GetComponent<Damagable>();
+    otherDamagable.currentHealth = 0;
+    otherDamagable.Damage();
   }
 
   void Update() {
-    Camera camera = Camera.main;
-    Vector2 cameraBounds = new Vector2(camera.orthographicSize * camera.aspect, camera.orthographicSize);
-    Vector2 spriteDimensions = spriteRenderer.bounds.size / 2;
-    Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    if (damagable.alive) {
+      Camera camera = Camera.main;
+      Vector2 cameraBounds = new Vector2(camera.orthographicSize * camera.aspect, camera.orthographicSize);
+      Vector2 spriteDimensions = spriteRenderer.bounds.size / 2;
+      Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-    mousePosition.x = Mathf.Clamp(mousePosition.x, - cameraBounds.x + spriteDimensions.x, cameraBounds.x - spriteDimensions.x);
-    mousePosition.y = Mathf.Clamp(mousePosition.y, - cameraBounds.y, cameraBounds.y);
+      mousePosition.x = Mathf.Clamp(mousePosition.x, - cameraBounds.x + spriteDimensions.x, cameraBounds.x - spriteDimensions.x);
+      mousePosition.y = Mathf.Clamp(mousePosition.y, - cameraBounds.y, cameraBounds.y);
 
-    rigidbody2d.MovePosition(Vector2.Lerp(transform.position, mousePosition, moveSpeed));
+      rigidbody2d.MovePosition(Vector2.Lerp(transform.position, mousePosition, moveSpeed));
+    }
   }
 }

@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageSprite: {fileID: 21300000, guid: 08896f57301334df89300aa0db401207, type: 3}
-  health: 15
+  maxHealth: 15
+  currentHealth: 0
   damageDistance: 0.03
   numDamageSprites: 7

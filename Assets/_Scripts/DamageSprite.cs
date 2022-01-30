@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class DamageSprite : MonoBehaviour {
   public float speed = 1f;
-  public float damping = 0.98f;
+  public float damping = 0.975f;
   public float cutoff = 0.01f;
   private SpriteRenderer spriteRenderer;
   private Vector2 acceleration;
