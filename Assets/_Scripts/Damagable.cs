@@ -7,6 +7,8 @@ public class Damagable : MonoBehaviour {
   private GameObject damageSpritePrefab;
   public Sprite damageSprite;
   public int health = 5;
+  private int currentHealth;
+  private float damageScaleFactor = 1f;
   Color[] colors = { Color.cyan, Color.yellow, Color.magenta };
   int colorIndex = 0;
 
@@ -15,20 +17,22 @@ public class Damagable : MonoBehaviour {
 
   void Awake() {
     damageSpritePrefab = Resources.Load("Damage Sprite Prefab") as GameObject;
+    currentHealth = health;
   }
 
   public void Damage() {
-    health -= 1;
+    currentHealth -= 1;
 
-    if (health <= 0) {
+    if (currentHealth <= 0) {
       Destroy(gameObject);
     }
     damageSpritePrefab.GetComponent<SpriteRenderer>().sprite = damageSprite;
     for (int i = 0; i < numDamageSprites; i++) {
-      Debug.Log($"Instantiating on {gameObject.name}");
-      GameObject go = Instantiate(damageSpritePrefab, transform.position + Vector3.forward, transform.rotation, transform);
-      Vector2 velocity = Quaternion.Euler(0f, 0f, 360 / numDamageSprites * i) * Vector2.up * damageDistance;
-      Debug.Log($"Velocity = {velocity}");
+      Quaternion rotation = Quaternion.Euler(0f, 0f, Random.Range(-5f, 5f));
+      GameObject go = Instantiate(damageSpritePrefab, transform.position + Vector3.forward, transform.rotation * rotation, transform);
+      float damageScaling = 1f + ((health - currentHealth) / (float) health) * damageScaleFactor;
+
+      Vector2 velocity = Quaternion.Euler(0f, 0f, 360 / numDamageSprites * i) * Vector2.up * damageDistance * damageScaling;
       go.GetComponent<DamageSprite>().Init(colors[colorIndex++ % colors.Length], velocity);
     }
   }
