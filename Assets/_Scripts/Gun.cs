@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour {
     }
 
     void Update() {
-    if (Input.GetMouseButtonDown(0)) {
+    if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) {
       GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
       bullet.transform.parent = transform;
       bullet.GetComponent<Polarity>().setPolarity(transform.parent.GetComponent<Polarity>().getPolarity());

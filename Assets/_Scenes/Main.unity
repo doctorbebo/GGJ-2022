@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4405780345239283678, guid: d3bb79518da7b49b0a18920eff4b0207, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4405780345239283679, guid: d3bb79518da7b49b0a18920eff4b0207, type: 3}
       propertyPath: obstacles.Array.size
       value: 3

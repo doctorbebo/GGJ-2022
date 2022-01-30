@@ -42,7 +42,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void OnDisable()
     {
-        Time.timeScale = 1;        
+        Time.timeScale = 1;
     }
 
     private void OnDestroy()
