@@ -77,14 +77,14 @@ public class MainMenuManager : MonoBehaviour
 
     public void MouseClick()
     {
-        audioSource.volume = 0.75f;
+        audioSource.volume = 0.1f;
         audioSource.pitch = Random.Range(0.8f, 1.3f);
         audioSource.PlayOneShot(clickSFX);
     }
 
     public void MouseHover()
     {
-        audioSource.volume = 1f;
+        audioSource.volume = 0.15f;
         audioSource.pitch = Random.Range(0.9f, 1.1f);
         audioSource.PlayOneShot(hoverSFX);
     }
