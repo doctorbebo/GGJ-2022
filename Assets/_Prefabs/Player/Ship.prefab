@@ -14,11 +14,10 @@ GameObject:
   - component: {fileID: 250103440510612539}
   - component: {fileID: 250103440510612536}
   - component: {fileID: 250103440510612540}
-  - component: {fileID: 8210213608337451573}
-  - component: {fileID: 4256443366064096822}
   - component: {fileID: 250103440510612541}
   - component: {fileID: 4338730265847473750}
   - component: {fileID: 8161448055859265619}
+  - component: {fileID: 265424112198652039}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -152,58 +151,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &8210213608337451573
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250103440510612535}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.8867227, y: -0.021568686}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.01, y: 2.6}
-    newSize: {x: 4.01, y: 2.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.2365549, y: 0.8885916}
-  m_EdgeRadius: 0
---- !u!61 &4256443366064096822
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250103440510612535}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.139493, y: 0.040373564}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.01, y: 2.6}
-    newSize: {x: 4.01, y: 2.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7844176, y: 2.6185312}
-  m_EdgeRadius: 0
 --- !u!114 &250103440510612541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,3 +208,60 @@ MonoBehaviour:
   damageSprite: {fileID: 21300000, guid: d112e750a3968490e820b1c2301b1c3d, type: 3}
   damageDistance: 0.03
   numDamageSprites: 7
+--- !u!60 &265424112198652039
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250103440510612535}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.41, y: 2.6}
+    newSize: {x: 4.01, y: 2.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.315, y: -0.41}
+      - {x: 0.48499998, y: -0.39}
+      - {x: 0.60499996, y: -0.39}
+      - {x: 0.635, y: -0.39999998}
+      - {x: 1.265, y: -0.41}
+      - {x: 1.3249999, y: -0.39999998}
+      - {x: 1.375, y: -0.32}
+      - {x: 1.7049999, y: -0.31}
+      - {x: 1.7049999, y: -0.17}
+      - {x: 1.375, y: -0.13}
+      - {x: 1.375, y: 0.16}
+      - {x: 1.7049999, y: 0.16}
+      - {x: 1.7049999, y: 0.29999998}
+      - {x: 1.365, y: 0.29999998}
+      - {x: 1.365, y: 0.35}
+      - {x: 1.275, y: 0.41}
+      - {x: 0.655, y: 0.39999998}
+      - {x: 0.53499997, y: 0.37}
+      - {x: 0.385, y: 0.42}
+      - {x: 0.305, y: 0.41}
+      - {x: 0.21499999, y: 0.39}
+      - {x: 0.055, y: 0.31}
+      - {x: -0.024999999, y: 0.35999998}
+      - {x: -0.235, y: 0.48}
+      - {x: -1.255, y: 1.0699999}
+      - {x: -1.665, y: 1.3}
+      - {x: -1.7049999, y: 1.3}
+      - {x: -1.7049999, y: -1.3}
+      - {x: -1.645, y: -1.3}
+      - {x: -0.235, y: -0.48}
+      - {x: 0.085, y: -0.29999998}
+      - {x: 0.225, y: -0.39}
