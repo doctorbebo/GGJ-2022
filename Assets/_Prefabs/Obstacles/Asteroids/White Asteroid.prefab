@@ -7,9 +7,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5290625343777114313, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
+      propertyPath: rotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: m_Name
-      value: Asteroid
+      value: White Asteroid
       objectReference: {fileID: 0}
     - target: {fileID: 5290625343777114318, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: m_RootOrder

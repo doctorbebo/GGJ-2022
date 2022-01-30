@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5290625343777114313, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: rotationSpeed
-      value: 60
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
       propertyPath: m_Name
@@ -66,6 +66,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5290625343777114314, guid: 0345d5ab41efd457caeff9e39910352c, type: 3}
   m_PrefabInstance: {fileID: 5068132179537611545}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5712566695022221776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097062901087421395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6338f1a745d1b4af7a48e24ed39ee578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1914428140333275282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,15 +118,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPolarity: 0
---- !u!114 &-5712566695022221776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097062901087421395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6338f1a745d1b4af7a48e24ed39ee578, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
