@@ -29,33 +29,25 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject[] obstacles;
 
 
-    private void Awake()
-    {
-        //if (instance == null)
-        //    instance = this;
-        //else
-        //    Destroy(this);
-
+    private void Awake() {
         timer = spawnRate;
     }
 
-    private void Update()
-    {
-        if(timer < 0f)
-        {
+    private void Update() {
+        if (timer < 0f) {
             timer = spawnRate;
             SpawnObstacle();
-        }
-        else
-        {
+        } else {
             timer -= Time.deltaTime;
         }
     }
 
-    private void SpawnObstacle()
-    {
+    private void SpawnObstacle() {
         GameObject spawnObj = obstacles[Random.Range(0,obstacles.Length)];
         spawnObj = Instantiate(spawnObj, new Vector3(spawnXposition, Random.Range(min, max), 0), Quaternion.identity, transform);
+        float scale = Random.Range(0.5f, 2f);
+        timer += scale / 0.5f * Time.deltaTime;
+        spawnObj.transform.localScale = new Vector3(scale, scale, 1.0f);
 
         // Randomly select polarity for newly spawned PolarityChangingAsteroids
         if (spawnObj.GetComponent<PolarityChangeListener>() != null) {
