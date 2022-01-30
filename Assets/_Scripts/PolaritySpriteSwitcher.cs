@@ -22,5 +22,6 @@ public class PolaritySpriteSwitcher : MonoBehaviour {
 
   void SwitchSprites(int newPolarity) {
     spriteRenderer.sprite = sprites[newPolarity];
+    spriteRenderer.sortingOrder = polarity.samePolaraityAsPlayer ? 1 : 0;
   }
 }

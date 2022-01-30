@@ -345,6 +345,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4405780345239283679, guid: d3bb79518da7b49b0a18920eff4b0207, type: 3}
+      propertyPath: spawnRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405780345239283679, guid: d3bb79518da7b49b0a18920eff4b0207, type: 3}
       propertyPath: obstacles.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -373,6 +377,10 @@ PrefabInstance:
       propertyPath: bulletSFX
       value: 
       objectReference: {fileID: 1358550994}
+    - target: {fileID: 250103440510612534, guid: 49552c7df720d4cb98a14a4105f37246, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 250103440510612535, guid: 49552c7df720d4cb98a14a4105f37246, type: 3}
       propertyPath: m_Name
       value: Ship
@@ -420,6 +428,10 @@ PrefabInstance:
     - target: {fileID: 250103440510612537, guid: 49552c7df720d4cb98a14a4105f37246, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265424112198652039, guid: 49552c7df720d4cb98a14a4105f37246, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49552c7df720d4cb98a14a4105f37246, type: 3}

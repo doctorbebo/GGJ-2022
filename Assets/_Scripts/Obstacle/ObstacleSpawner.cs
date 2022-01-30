@@ -5,8 +5,8 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     private static ObstacleSpawner instance;
-
-
+    public static float maxScale = 3f;
+    public static float minScale = 0.25f;
 
     [Header("Obstacles will Spawn between these two values on the Y axis")]
 
@@ -45,11 +45,14 @@ public class ObstacleSpawner : MonoBehaviour
     private void SpawnObstacle() {
         GameObject spawnObj = obstacles[Random.Range(0,obstacles.Length)];
         spawnObj = Instantiate(spawnObj, new Vector3(spawnXposition, Random.Range(min, max), 0), Quaternion.identity, transform);
-        float scale = Random.Range(0.25f, 1.5f);
-        timer += scale / 0.25f * Time.deltaTime;
+        float scale = Random.Range(minScale, maxScale);
+        Debug.Log($"Adding { (scale - minScale) / (maxScale - minScale) * 10 * Time.deltaTime } to timer");
+        timer += (scale - minScale) / (maxScale - minScale) * 3 * Time.deltaTime;
         spawnObj.transform.localScale = new Vector3(scale, scale, 1.0f);
         Damagable damagable = spawnObj.GetComponent<Damagable>();
         damagable.health = (int) (damagable.health * scale);
+        // Rigidbody2D rigidbody = spawnObj.GetComponent<Rigidbody2D>();
+        // rigidbody.mass *= scale;
 
         // Randomly select polarity for newly spawned PolarityChangingAsteroids
         if (spawnObj.GetComponent<PolarityChangeListener>() != null) {

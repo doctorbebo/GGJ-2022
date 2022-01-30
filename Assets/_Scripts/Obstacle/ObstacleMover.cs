@@ -13,7 +13,7 @@ public class ObstacleMover : MonoBehaviour
     }
 
     private void OnEnable() {
-        float thrust = Random.Range(25f, 35f);
+        float thrust = 30f;//Random.Range(15f, 35f);
         rb.AddForce(Vector3.left * thrust * 10);
 
         float rotationSpeed = Random.Range(-10f, 10f);
