@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
     public static event Action Escape;
     public static event Action PolarityChanged;
     public static event Action Restart;
+    public static event Action LeftClick;
 
     private void Awake()
     {
@@ -28,6 +29,11 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1)) {
             PolarityChanged?.Invoke();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            LeftClick?.Invoke();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
