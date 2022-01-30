@@ -46,8 +46,10 @@ public class ObstacleSpawner : MonoBehaviour
         GameObject spawnObj = obstacles[Random.Range(0,obstacles.Length)];
         spawnObj = Instantiate(spawnObj, new Vector3(spawnXposition, Random.Range(min, max), 0), Quaternion.identity, transform);
         float scale = Random.Range(0.25f, 1.5f);
-        timer += scale / 0.5f * Time.deltaTime;
+        timer += scale / 0.25f * Time.deltaTime;
         spawnObj.transform.localScale = new Vector3(scale, scale, 1.0f);
+        Damagable damagable = spawnObj.GetComponent<Damagable>();
+        damagable.health = (int) (damagable.health * scale);
 
         // Randomly select polarity for newly spawned PolarityChangingAsteroids
         if (spawnObj.GetComponent<PolarityChangeListener>() != null) {
