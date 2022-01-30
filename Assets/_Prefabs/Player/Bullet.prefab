@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: -62537012571216059}
   - component: {fileID: 487195898480736578}
   - component: {fileID: 9060113998831556574}
-  - component: {fileID: 7213811793108359911}
   - component: {fileID: -1222863274389757960}
   - component: {fileID: -2727158517721390599}
   - component: {fileID: -5957884370808370156}
+  - component: {fileID: 3954194911028243334}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6783a227fc2ca45fb9e28476b18c2d12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9aeee2a4690861489870cecfde46f07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,18 +136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPolarity: 0
---- !u!114 &7213811793108359911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3636150529220970222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b82d2ca34d404fafa6c9633b1219352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-1222863274389757960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,8 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 6783a227fc2ca45fb9e28476b18c2d12, type: 3}
-  - {fileID: 21300000, guid: 2b926ba44eb9744d3837e332a89b4755, type: 3}
+  - {fileID: 21300000, guid: f9aeee2a4690861489870cecfde46f07, type: 3}
+  - {fileID: 21300000, guid: 704822f628968684cb36ffc69ce8b895, type: 3}
 --- !u!114 &-2727158517721390599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,12 +180,24 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.06, y: 1.06}
+    oldSize: {x: 0.77, y: 0.12}
     newSize: {x: 1.06, y: 1.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.06, y: 1.06}
+  m_Size: {x: 1, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &3954194911028243334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3636150529220970222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6338f1a745d1b4af7a48e24ed39ee578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -28,7 +28,7 @@ public class ObstacleSpawner : MonoBehaviour
     [Header("Obstacle Prefabs")]
     public GameObject[] obstacles;
 
-    
+
     private void Awake()
     {
         //if (instance == null)
@@ -56,6 +56,15 @@ public class ObstacleSpawner : MonoBehaviour
     {
         GameObject spawnObj = obstacles[Random.Range(0,obstacles.Length)];
         spawnObj = Instantiate(spawnObj, new Vector3(spawnXposition, Random.Range(min, max), 0), Quaternion.identity, transform);
+
+        // Randomly select polarity for newly spawned PolarityChangingAsteroids
+        if (spawnObj.GetComponent<PolarityChangeListener>() != null) {
+          Polarity polarity = GetComponent<Polarity>();
+          if (polarity != null) { // Not sure why these are occasionally null
+            polarity.setPolarity(Random.Range(0, PolarityStates.STATES.Length));
+          }
+        }
+
         Destroy(spawnObj, 30);
     }
 
