@@ -7,7 +7,7 @@ public class ButtonEffect : MonoBehaviour
 
     public void ZoomIn()
     {
-        gameObject.transform.localScale = new Vector2(1.2f, 1.2f);
+        gameObject.transform.localScale = new Vector2(1.02f, 1.02f);
     }
 
     public void ZoomOut()
