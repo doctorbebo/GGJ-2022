@@ -19,22 +19,29 @@ public class MainMenuManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(this);
-        InputManager.Escape += ActivateSelf;
     }
 
     private void OnEnable()
     {
+        InputManager.Escape += ActivateSelf;
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         if (sceneIndex == 0)
             playResumeText.text = "Play";
         else
             playResumeText.text = "Resume";
+
+        Time.timeScale = 0;
     }
 
     private void OnDisable()
     {
-        
+        Time.timeScale = 1;        
+    }
+
+    private void OnDestroy()
+    {
+        InputManager.Escape -= ActivateSelf;
     }
 
     public void PlayResume()
@@ -58,6 +65,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void ActivateSelf()
     {
-        gameObject.SetActive(true);
+        if(SceneManager.GetActiveScene().buildIndex != 0)
+            gameObject.SetActive(!gameObject.activeSelf);
     }
 }
